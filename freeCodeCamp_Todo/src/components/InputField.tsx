@@ -1,14 +1,14 @@
 import React, { useRef } from "react";
 import "./styles.css";
 
-interface props {
+interface Props {
   todo: string;
   setTodo: React.Dispatch<React.SetStateAction<string>>;
   handleAdd: (e: React.FormEvent) => void;
 }
 
 /*const InputField = ({todo, setTodo}: Props) */
-const InputField: React.FC<props> = ({ todo, setTodo, handleAdd }) => {
+const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
@@ -22,7 +22,7 @@ const InputField: React.FC<props> = ({ todo, setTodo, handleAdd }) => {
       <input
         type="text"
         placeholder="Enter a Task"
-        value={todo}//state icerisindeki degeri input icerisinde göstermek icin bu sekilde yapiliyor!
+        value={todo} //state icerisindeki degeri input icerisinde göstermek icin bu sekilde yapiliyor!
         ref={inputRef}
         onChange={(e) => setTodo(e.target.value)}
         className="input__box"
