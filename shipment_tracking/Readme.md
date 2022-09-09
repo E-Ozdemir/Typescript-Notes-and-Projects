@@ -1,4 +1,4 @@
-> 1.Initialising
+> 1.Initializing
 
 <code>npm init -y</code><br>
 <code>npm install webpack webpack-cli --save-dev</code>
